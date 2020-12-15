@@ -41,7 +41,7 @@ async function install(): Promise<string> {
   } else if (process.platform === 'darwin') {
     const cmdlineToolsZip = await tc.downloadTool(COMMANDLINE_TOOLS_MAC_URL)
     const cmdlineTools = await tc.extractZip(cmdlineToolsZip)
-    sdkManager = path.join(cmdlineTools, 'tools', 'bin', 'sdkmanager')
+    sdkManager = path.join(cmdlineTools, 'cmdline-tools', 'bin', 'sdkmanager')
   } else if (process.platform === 'win32') {
     const cmdlineToolsZip = await tc.downloadTool(COMMANDLINE_TOOLS_WIN_URL)
     const cmdlineTools = await tc.extractZip(cmdlineToolsZip)
